@@ -1,28 +1,24 @@
 import type { Metadata, Viewport } from "next"
-import { Space_Grotesk, Inter } from "next/font/google"
+import { Playfair_Display } from "next/font/google"
 import "./globals.css"
 
-const spaceGrotesk = Space_Grotesk({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-playfair",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Aube | Architecting the Dawn of Intelligence",
+  title: "aube | AI 웨딩 스냅 스튜디오",
   description:
-    "Aube is an AI company translating complex data into elegant human experiences. Discover our ecosystem of intelligent solutions.",
+    "셀카 한 장이 웨딩 스냅이 됩니다. AI 기술로 만드는 프리미엄 웨딩 스냅 보정 서비스.",
   metadataBase: new URL("https://aube.ai.kr"),
   openGraph: {
-    title: "Aube | Architecting the Dawn of Intelligence",
+    title: "aube | AI 웨딩 스냅 스튜디오",
     description:
-      "Aube is an AI company translating complex data into elegant human experiences.",
+      "셀카 한 장이 웨딩 스냅이 됩니다. AI 기술로 만드는 프리미엄 웨딩 스냅 보정 서비스.",
     url: "https://aube.ai.kr",
-    siteName: "Aube",
+    siteName: "aube",
     locale: "ko_KR",
     type: "website",
   },
@@ -32,7 +28,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0c0d12",
+  themeColor: "#FAFAF8",
 }
 
 export default function RootLayout({
@@ -41,10 +37,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased`}
-      >
+    <html lang="ko">
+      <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
+      <body className={`${playfair.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

@@ -7,3 +7,4 @@ venv/
 *.egg-info/
 .next/
 node_modules/
+.vercel

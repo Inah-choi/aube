@@ -1,21 +1,27 @@
 import { Navbar } from "@/components/aube/navbar"
 import { Hero } from "@/components/aube/hero"
-import { Solutions } from "@/components/aube/solutions"
-import { About } from "@/components/aube/about"
-import { Contact } from "@/components/aube/contact"
+import { TrustBadges } from "@/components/aube/trust-badges"
+import { BeforeAfter } from "@/components/aube/before-after"
+import { ProductGrid } from "@/components/aube/product-grid"
+import { Process } from "@/components/aube/process"
+import { Reviews } from "@/components/aube/reviews"
+import { FaqSummary } from "@/components/aube/faq-summary"
+import { CtaBanner } from "@/components/aube/cta-banner"
 import { Footer } from "@/components/aube/footer"
-import { ConstellationCanvas } from "@/components/aube/constellation-canvas"
 
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <ConstellationCanvas />
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Solutions />
-        <Contact />
+        <TrustBadges />
+        <BeforeAfter />
+        <ProductGrid />
+        <Process />
+        <Reviews />
+        <FaqSummary />
+        <CtaBanner />
       </main>
       <Footer />
     </div>

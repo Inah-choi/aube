@@ -30,41 +30,53 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center"
     >
-      <div className="mx-auto max-w-4xl">
+      {/* Background gradient */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(30 20% 94%) 0%, hsl(40 20% 98%) 50%, hsl(30 15% 93%) 100%)",
+        }}
+      />
+
+      {/* Decorative soft shapes */}
+      <div className="absolute top-20 left-1/4 -z-10 h-64 w-64 rounded-full bg-rose/5 blur-3xl" />
+      <div className="absolute bottom-32 right-1/4 -z-10 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
+
+      <div className="mx-auto max-w-3xl">
         <p
           data-animate
-          className="fade-up mb-6 font-heading text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground"
+          className="fade-up mb-4 text-sm font-medium tracking-widest text-gold"
         >
-          AI Company
+          AI WEDDING SNAP STUDIO
         </p>
         <h1
           data-animate
-          className="fade-up font-heading text-5xl font-bold leading-[1.05] tracking-tight text-foreground delay-100 md:text-7xl lg:text-8xl"
+          className="fade-up font-serif text-4xl font-bold leading-tight text-foreground delay-100 md:text-6xl lg:text-7xl"
         >
-          Architecting the
+          One Selfie,
           <br />
-          <span className="bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">
-            Dawn
-          </span>{" "}
-          of Intelligence
+          Your <span className="italic text-accent">Wedding</span> Story
         </h1>
         <p
           data-animate
-          className="fade-up mx-auto mt-8 max-w-xl text-base leading-relaxed text-muted-foreground delay-200 md:text-lg"
+          className="fade-up mx-auto mt-6 max-w-md text-base leading-relaxed text-muted-foreground delay-200 md:text-lg"
         >
-          We translate complex data into elegant human experiences.
+          셀카 한 장이 웨딩 스냅이 됩니다.
+          <br className="hidden sm:block" />
+          AI가 만드는 프리미엄 웨딩 보정 서비스.
         </p>
         <div
           data-animate
-          className="fade-up mt-10 flex flex-col items-center justify-center gap-4 delay-300 sm:flex-row"
+          className="fade-up mt-8 flex flex-col items-center justify-center gap-3 delay-300 sm:flex-row sm:gap-4"
         >
           <a
-            href="#solutions"
-            className="group inline-flex items-center gap-2 border border-primary/40 bg-transparent px-8 py-3.5 font-heading text-sm font-medium uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground"
+            href="#products"
+            className="group inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-rose-dark hover:shadow-lg"
           >
-            Explore Ecosystem
+            상품 둘러보기
             <svg
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               fill="none"
@@ -80,22 +92,24 @@ export function Hero() {
             </svg>
           </a>
           <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-3.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            href="http://pf.kakao.com/_IxaZqX/chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-gold bg-transparent px-8 py-3.5 text-sm font-medium text-foreground transition-all hover:bg-gold/10"
           >
-            Get in touch
+            카톡 상담하기
           </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <div className="flex flex-col items-center gap-3">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="flex flex-col items-center gap-2">
           <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             Scroll
           </span>
-          <div className="relative h-12 w-px overflow-hidden bg-border">
-            <div className="animate-scroll-line absolute inset-x-0 h-full bg-primary" />
+          <div className="relative h-10 w-px overflow-hidden bg-border">
+            <div className="animate-scroll-line absolute inset-x-0 h-full bg-gold" />
           </div>
         </div>
       </div>
